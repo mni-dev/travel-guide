@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import './CreateUser.css';
+import { Link } from 'react-router-dom';
+import './Register.css';
 
 
-const CreateUser = () => {
+const Register = () => {
     return (
         <div className='container mx-auto w-50'>
             <Form>
@@ -37,6 +38,8 @@ const CreateUser = () => {
                     <Form.Control type="password" placeholder="Confirm Password" />
                 </Form.Group>
 
+                <p>Already have an account? <span><Link to="/login">Login here.</Link></span></p>
+                
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
@@ -49,4 +52,4 @@ const CreateUser = () => {
     );
 };
 
-export default CreateUser;
+export default Register;
