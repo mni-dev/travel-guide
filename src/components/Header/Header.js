@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import {Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -7,22 +8,22 @@ const Header = () => {
     <div>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar Scroll</Navbar.Brand>
+          {/* <Navbar.Brand href="#">Navbar Scroll</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <input type="text" placeholder="search your destination" />
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: '100px'}}
               navbarScroll
             >
-              <Nav.Link to="/">Home</Nav.Link>
-              <Nav.Link  to="news">News</Nav.Link>
-              <Nav.Link  to="destination">Destination</Nav.Link>
-              <Nav.Link to="blog">Blog</Nav.Link>
-              <Nav.Link to="contact">Contact</Nav.Link>
-              <Nav.Link to="login">Login</Nav.Link>
-              <Nav.Link to="register">Register</Nav.Link>
+              <Link to="/">Home</Link>
+              <Link to="news">News</Link>
+              <Link to="destination">Destination</ Link>
+              <Link to="blog">Blog</Link>
+              <Link to="contact">Contact</Link>
+              <Link to="login">Login</Link>
+              <Link to="register">Register</Link>
             </Nav>
           
           </Navbar.Collapse>

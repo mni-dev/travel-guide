@@ -9,6 +9,7 @@ import Blog from './SharedPages/Blog/Blog';
 import Destination from './SharedPages/Destination/Destination';
 import News from './SharedPages/News/News';
 import NotFound from './components/NotFound/NotFound';
+import RequireAuth from './components/RequireAuth/RequireAuth';
  
  
 
@@ -22,7 +23,9 @@ function App() {
          <Route path='/login' element={<Login></Login>}></Route>
          <Route path='/contact' element={<Contact></Contact>}></Route>
          <Route path='/blog' element={<Blog></Blog>}></Route>
-         <Route path='/destination' element={<Destination></Destination>}></Route>
+         <Route path='/destination' element={<RequireAuth>
+          <Destination></Destination>
+         </RequireAuth>}></Route>
          <Route path='/news' element={<News></News>}></Route>
          <Route path='*' element={<NotFound></NotFound>}></Route>
        </Routes>
